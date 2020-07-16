@@ -2,7 +2,15 @@
 #+author: Matt Brigida, Ph.D.
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
+The DuPont Identity breaks Return-on-Equity (ROE) into 3 separate components, the Profit Margin (PM), Total Asset Turnover (TAT) and the Equity Multiplier (EM).
 
+* Derivation
+
+Let /NI/ denote Net Income, /E/ denote equity, and /A/ denote assets.  /ROA/ is Return-on-Assets.  
+
+$$ROE = \frac{NI}{E} = \frac{NI}{A}(\frac{A}{E}) = ROA(EM)$$
+
+This is not yet the DuPont Identity, but it does ahow us something very useful.  
 
 #+BEGIN_EXPORT html
 
