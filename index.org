@@ -6,11 +6,45 @@ The DuPont Identity breaks Return-on-Equity (ROE) into 3 separate components, th
 
 * Derivation
 
+We'll first state /ROE/ in terms of /ROA/ because it gives and important insight for using each as a measure of management performance.  
+
+** The First Step: ROA
+
 Let /NI/ denote Net Income, /E/ denote equity, and /A/ denote assets.  /ROA/ is Return-on-Assets.  
 
 $$ROE = \frac{NI}{E} = \frac{NI}{A}(\frac{A}{E}) = ROA(EM)$$
 
-This is not yet the DuPont Identity, but it does ahow us something very useful.  
+This is not yet the DuPont Identity, but it does show us something very
+useful.  /ROE/ is equal to /ROA/ multiplied by a measure of the firm's
+capital structure.  Remember /EM/ is the firm's debt-to-equity ratio plus 1.  
+
+The important point here is managers can change /EM/ easily.  In fact if they
+want to increase /EM/ (and thereby likely[fn:1] increase /ROE/) they just have to
+issue debt and buy back stock. We will see /ROA/ is solely a function of
+operating measure of the firm, and cannot easily be changed by management.
+
+So if you were to measure management performance would you use the measure that management can easily increase or decrease via the capital structure?  Or would you use the measure of operating performace they cannot easily
+change?
+
+** DuPont Identity
+
+Decomposing /ROA/:
+
+$$ROA = \frac{NI}{A} = \frac{NI}{S}(\frac{S}{A}) = PM(TAT)$$
+
+where /S/ denotes sales, and /PM/ and /TAT/ is profit margin and total asset turnover respectively.  Inserting this into the /ROE/ equation above affords:
+
+$$ROE = PM(TAT)(EM)$$
+
+which is the DuPont Identity.  It says that a firm's return on equity is the product of the firm's profit margin, total asset turnover, and equity multiplier.  
+
+* Application
+
+This is particularly useful when you realize that profit margin measures a firm's profitability.  That is, it measures how well a firm controls its costs.  Total asset turnover, however, measures how efficiently a firms uses its assets.  Lastly, the equity multiplier (which is one plus the debt-to-equity ratio) is a measure of the firm's use of debt in its capital structure.
+
+So the DuPont Identity allows you to see what is driving a firm's /ROE/.  Does the firm have a high /ROE/ because it controls is costs, or because it uses its assets efficiently?  Or does it simply have a high /ROE/ because it is highly leveraged (not a particularly good reason).
+
+
 
 #+BEGIN_EXPORT html
 
@@ -18,12 +52,13 @@ This is not yet the DuPont Identity, but it does ahow us something very useful.
 
 var calculate = function() {
 
-  var roe = Number(document.getElementById("roe").value);
-  var b = Number(document.getElementById("b").value);
+  var PM = Number(document.getElementById("PM").value);
+  var TAT = Number(document.getElementById("TAT").value);
+  var DE = Number(document.getElementById("DE").value);
 
-  var sgr = (roe * b) / (1 - roe * b);
+  var roe = PM * TAT * (1 + DE);
   
-  document.getElementById("out_sgr").innerHTML = sgr.toFixed(4);
+  document.getElementById("out_roe").innerHTML = roe.toFixed(4);
 
 }
 
@@ -31,7 +66,7 @@ var calculate = function() {
 
 <body class="all">
   <h3>
-    SGR Calculator
+    ROE (DuPont) Calculator
   </h3>
 
   <div class="row">
@@ -39,12 +74,16 @@ var calculate = function() {
     <div class="column">
       <table style="width:100%">
         <tr>
-          <th align="left">ROE:</th>
-          <th><input id="roe" value="0.15" style="width: 50px"></th>
+          <th align="left">Profit Margin:</th>
+          <th><input id="PM" value="0.08" style="width: 50px"></th>
         </tr>
         <tr>
-          <th align="left">Plowback Ratio:</th>
-          <th><input id="b" value="0.2" style="width: 50px"></th>
+          <th align="left">Total Asset Turnover:</th>
+          <th><input id="TAT" value="1.3" style="width: 50px"></th>
+        </tr>
+        <tr>
+          <th align="left">Debt-to-Equity Ratio:</th>
+          <th><input id="DE" value="0.5" style="width: 50px"></th>
         </tr>
       </table>
       <button onclick="calculate()">
@@ -53,7 +92,7 @@ var calculate = function() {
     </div>
 
     <div class="column">
-    <p><b>SGR: <span id="out_sgr"></span></b></p>
+    <p><b>ROE: <span id="out_roe"></span></b></p>
     </div>
 
   </div>
@@ -62,22 +101,6 @@ var calculate = function() {
   <br>
 </body>
 
-#+END_EXPORT
-
-#+BEGIN_EXPORT html
-<style>
-.fiddle iframe {
-height: 300px //you can manually change this height
-}
-</style>
-
-<div class="fiddle">
-<script async src="https://jsfiddle.net/mbkr1/jnzv5de1/embed/result,js,html,css/dark/"></script>
-</div>
-#+END_EXPORT
-
-#+BEGIN_EXPORT html :eval no
-<iframe width="100%" height="300" src="https://jsfiddle.net/mbkr1/jnzv5de1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 #+END_EXPORT
 
 
@@ -229,4 +252,8 @@ document.getElementById("p3").style.backgroundColor = "#ff6666";
 #+RESULTS:
 : 
 : "Flesch-Kincaid grade level score: 4.77"
+
+* Footnotes
+
+[fn:1] There are unlikely situations where increasing a firm's /EM/ will decrease /ROE/ because the effect of interest expense on reducing /PM/ more than offsets the increase in the debt-to-equity ratio.
 
