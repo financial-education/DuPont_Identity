@@ -44,6 +44,9 @@ This is particularly useful when you realize that profit margin measures a firm'
 
 So the DuPont Identity allows you to see what is driving a firm's /ROE/.  Does the firm have a high /ROE/ because it controls is costs, or because it uses its assets efficiently?  Or does it simply have a high /ROE/ because it is highly leveraged (not a particularly good reason).
 
+#+BEGIN_QUOTE
+Author note:  I once was asked by upper management for an analysis of the performance of our wind farms in north Texas.  While going through their financial statements I realized I had everything I needed to calculate the DuPont Identity.  I was thus able to point to profitability as the driver of our wind farm returns.
+#+END_QUOTE
 
 
 #+BEGIN_EXPORT html
@@ -139,12 +142,12 @@ document.getElementById("p1").style.backgroundColor = "#ff6666";
 
 
 
-<p>1. Assume Utica Boiler Inc has a 15% ROE and 40% payout ratio.  What is the maximum rate the firm can grow while maintining a constant total debt ratio and not selling any new stock?</p>
+<p>1. Assume Mohawk Valley Skateboards has a 10% profit margin, 1.6 in total asset turnover, and a 1.75 equity multiplier.  What is the firm's return on equity?</p>
 <form >
-<input type="radio" name="choice" value="Incorrect"> 1.44%<br>
-<input type="radio" name="choice" value="Correct"> 6.38%<br>
-<input type="radio" name="choice" value="Incorrect"> 15.00%<br>
-<input type="radio" name="choice" value="Incorrect"> 33.12%
+<input type="radio" name="choice" value="Incorrect"> 4%<br>
+<input type="radio" name="choice" value="Correct"> 28%<br>
+<input type="radio" name="choice" value="Incorrect"> 36%<br>
+<input type="radio" name="choice" value="Incorrect"> 55%
 </form>
 <button onclick="submitAnswer1()">Submit Answer</button>
 <span id="p1"></span>
@@ -183,12 +186,12 @@ document.getElementById("p2").style.backgroundColor = "#ff6666";
 
 
 <br>
-<p>2. Assume McCauley Ski Inc. has a 12% ROA and 20% payout ratio.  What is the maximum rate the firm can grow using only internal financing?</p>
+<p>2. New Hartford Paving Inc has a 10% profit margin, a 30% return on equity, and a debt-to-equity ratio of 1.2?  What is the firm's total asset turnover?</p>
 <form >
-<input type="radio" name="choice2" value="Incorrect"> -4.51%<br>
-<input type="radio" name="choice2" value="Incorrect"> 0.00%<br>
-<input type="radio" name="choice2" value="Correct"> 2.46%<br>
-<input type="radio" name="choice2" value="Incorrect"> 12.55%
+<input type="radio" name="choice2" value="Incorrect"> 1.36<br>
+<input type="radio" name="choice2" value="Incorrect"> 1.77<br>
+<input type="radio" name="choice2" value="Correct"> 2.2<br>
+<input type="radio" name="choice2" value="Incorrect"> 5.12
 </form>
 <button onclick="submitAnswer2()">Submit Answer</button>
 <span id="p2"></span>
@@ -225,11 +228,12 @@ document.getElementById("p3").style.backgroundColor = "#ff6666";
 
 
 <br>
-<p>3.  If a firm increases its profit margin, its IGR and SGR _______.  </p>
+<p>3.  If a firm has a 15% return on assets and a debt to equity ratio of 2, what is its return on equity?</p>
 <form >
-<input type="radio" name="choice3" value="Correct"> Increase<br>
-<input type="radio" name="choice3" value="Incorrect"> Decrease<br>
-<input type="radio" name="choice3" value="Incorrect"> Are unchanged
+<input type="radio" name="choice3" value="Incorrect"> 15%<br>
+<input type="radio" name="choice3" value="Incorrect"> 25%<br>
+<input type="radio" name="choice3" value="Incorrect"> 33%<br>
+<input type="radio" name="choice3" value="Correct"> 45%
 </form>
 <button onclick="submitAnswer3()">Submit Answer</button>
 <span id="p3"></span>
@@ -243,7 +247,7 @@ document.getElementById("p3").style.backgroundColor = "#ff6666";
 
 #+RESULTS:
 : 
-: "Flesch-Kincaid reading ease score: 77.93 Fairly easy (7th grade)"
+: "Flesch-Kincaid reading ease score: 76.49 Fairly easy (7th grade)"
 
 #+BEGIN_SRC elisp :results output :exports results
 (print (writegood-grade-level))
@@ -251,7 +255,7 @@ document.getElementById("p3").style.backgroundColor = "#ff6666";
 
 #+RESULTS:
 : 
-: "Flesch-Kincaid grade level score: 4.77"
+: "Flesch-Kincaid grade level score: 4.88"
 
 * Footnotes
 
