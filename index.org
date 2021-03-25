@@ -1,6 +1,6 @@
 #+title: The DuPont Identity
 #+author: Matt Brigida, Ph.D.
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 The DuPont Identity breaks Return-on-Equity (ROE) into 3 separate components, the Profit Margin (PM), Total Asset Turnover (TAT) and the Equity Multiplier (EM).
 
