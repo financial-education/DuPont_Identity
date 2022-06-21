@@ -188,9 +188,9 @@ document.getElementById("p2").style.backgroundColor = "#ff6666";
 <br>
 <p>2. New Hartford Paving Inc has a 10% profit margin, a 30% return on equity, and a debt-to-equity ratio of 1.2?  What is the firm's total asset turnover?</p>
 <form >
-<input type="radio" name="choice2" value="Incorrect"> 1.36<br>
+<input type="radio" name="choice2" value="Correct"> 1.36<br>
 <input type="radio" name="choice2" value="Incorrect"> 1.77<br>
-<input type="radio" name="choice2" value="Correct"> 2.2<br>
+<input type="radio" name="choice2" value="Incorrect"> 2.2<br>
 <input type="radio" name="choice2" value="Incorrect"> 5.12
 </form>
 <button onclick="submitAnswer2()">Submit Answer</button>
